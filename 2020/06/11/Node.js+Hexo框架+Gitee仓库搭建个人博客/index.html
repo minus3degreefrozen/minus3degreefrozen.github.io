@@ -5,15 +5,51 @@
   
 
   
-  <title>Hexo</title>
+  <title>Node.js+Hexo框架+Gitee仓库搭建个人博客 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Node.js+Hexo框架+Gitee仓库搭建个人博客Node.js的安装略 git的安装略 Hexo框架的安装 查看Node.js版本 1node -v  查看npm包管理器版本 1npm -v  效果图如下，Node.js版本为v12.18.0，npm包管理器版本为6.14.4：   安装cnpm包管理器  为什么要安装cnpm包管理器？ 因为国内直接使用npm包管理器安装hexo速度很慢，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node.js+Hexo框架+Gitee仓库搭建个人博客">
+<meta property="og:url" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Node.js+Hexo框架+Gitee仓库搭建个人博客Node.js的安装略 git的安装略 Hexo框架的安装 查看Node.js版本 1node -v  查看npm包管理器版本 1npm -v  效果图如下，Node.js版本为v12.18.0，npm包管理器版本为6.14.4：   安装cnpm包管理器  为什么要安装cnpm包管理器？ 因为国内直接使用npm包管理器安装hexo速度很慢，">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610214745113.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610215345936.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610215603268.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610215740779.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610215937504.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610220109862.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610221033966.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610222249688.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610222915955.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610223217012.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610224133239.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610224457102.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610224945066.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610225416705.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610225916066.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610230721726.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610231441468.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610231544127.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200611004119645.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610233802681.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610235531891.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610235715701.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610235814119.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200611004556126.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200611004833485.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200611005314983.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200611012014054.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200611012125583.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200611012512397.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200611013332091.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200611013523980.png">
+<meta property="article:published_time" content="2020-06-10T18:19:04.523Z">
+<meta property="article:modified_time" content="2020-06-10T17:42:53.284Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/assets/image-20200610214745113.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -62,9 +98,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Node.js+Hexo框架+Gitee仓库搭建个人博客" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Node.js+Hexo框架+Gitee仓库搭建个人博客" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
   <time datetime="2020-06-10T18:19:04.523Z" itemprop="datePublished">2020-06-11</time>
@@ -77,8 +111,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Node.js+Hexo框架+Gitee仓库搭建个人博客</a>
+    <h1 class="article-title" itemprop="name">
+      Node.js+Hexo框架+Gitee仓库搭建个人博客
     </h1>
   
 
@@ -267,60 +301,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/06/11/hello-world/" class="article-date">
-  <time datetime="2020-06-10T18:10:14.381Z" itemprop="datePublished">2020-06-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/11/hello-world/">Hello World</a>
-    </h1>
+    <a href="/2020/06/11/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/11/hello-world/" data-id="ckb9ogqhy0001rwum9qtx39ul" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         
