@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Node.js+Hexo框架+Gitee仓库搭建个人博客, Hexo">
+    <meta name="keywords" content="Node.js+Hexo框架+Gitee仓库搭建个人博客, Minus3DegreeFrozen">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Node.js+Hexo框架+Gitee仓库搭建个人博客 | Hexo</title>
+    <title>Node.js+Hexo框架+Gitee仓库搭建个人博客 | Minus3DegreeFrozen</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Minus3DegreeFrozen" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -41,7 +42,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">Minus3DegreeFrozen</span>
                 </a>
             </div>
             
@@ -140,7 +141,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">Minus3DegreeFrozen</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -232,7 +233,7 @@
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+            <a href="https://github.com/minus3degreefrozen/minus3degreefrozen.github.io" class="waves-effect waves-light" target="_blank">
                 <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -289,7 +290,7 @@
     }
 </style>
 
-<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+<a href="https://github.com/minus3degreefrozen/minus3degreefrozen.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
    data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -456,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    1.8k
                 </div>
                 
 
@@ -482,11 +483,10 @@
 <h2 id="git的安装"><a href="#git的安装" class="headerlink" title="git的安装"></a>git的安装</h2><p>略</p>
 <h2 id="Hexo框架的安装"><a href="#Hexo框架的安装" class="headerlink" title="Hexo框架的安装"></a>Hexo框架的安装</h2><ol>
 <li><p>查看Node.js版本</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+<pre class=" language-text"><code class="language-text">node -v</code></pre>
 </li>
 <li><p>查看npm包管理器版本</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-text"><code class="language-text">npm -v</code></pre>
 <p>效果图如下，Node.js版本为v12.18.0，npm包管理器版本为6.14.4：</p>
 <p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200610214745113.png" alt="image-20200610214745113"></p>
 </li>
@@ -496,9 +496,7 @@
 <p>因为国内直接使用npm包管理器安装hexo速度很慢，这里可以先借助npm安装淘宝提供的镜像cnpm包管理器，再利用cnpm包管理器安装hexo。</p>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p><code>-g</code>代表全局安装，<code>registry</code>代表镜像源指向的URL链接。</p>
+<pre><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></pre><p><code>-g</code>代表全局安装，<code>registry</code>代表镜像源指向的URL链接。</p>
 <p>执行命令时请不要使用代理，等待安装自动执行完毕：</p>
 <p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200610215345936.png" alt="image-20200610215345936"></p>
 <p>安装完成时如下图，忽略警告：</p>
@@ -507,9 +505,7 @@
 <p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200610215740779.png" alt="image-20200610215740779"></p>
 </li>
 <li><p>全局安装hexo框架</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200610215937504.png" alt="image-20200610215937504"></p>
+<pre><code>cnpm install -g hexo-cli</code></pre><p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200610215937504.png" alt="image-20200610215937504"></p>
 <p>输入<code>hexo -v</code>检测是否安装成功，可以看到hexo版本为3.1.0，基于node：</p>
 <p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200610220109862.png" alt="image-20200610220109862"></p>
 </li>
@@ -517,21 +513,15 @@
 <h2 id="个人博客搭建"><a href="#个人博客搭建" class="headerlink" title="个人博客搭建"></a>个人博客搭建</h2><ol>
 <li><p>创建博客项目目录：</p>
 <p>进入一个你经常保存文件的目录，这里我进入的是<code>C:\Users\零下三度极寒\Documents\</code>，进入命令如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd C:\Users\零下三度极寒\Documents</span><br></pre></td></tr></table></figure>
-
-<p>因为到时候要将博客推送到<em>码云gitee仓库</em>，创建的博客目录名称为<code>Blog_Gitee</code>，创建命令如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir C:\Users\零下三度极寒\Documents\Blog_Gitee</span><br></pre></td></tr></table></figure>
-
-<p><code>mkdir</code>就是make directory的意思</p>
+<pre><code>cd C:\Users\零下三度极寒\Documents</code></pre><p>因为到时候要将博客推送到<em>码云gitee仓库</em>，创建的博客目录名称为<code>Blog_Gitee</code>，创建命令如下：</p>
+<pre><code>mkdir C:\Users\零下三度极寒\Documents\Blog_Gitee</code></pre><p><code>mkdir</code>就是make directory的意思</p>
 <p>因为我这里之前已经创建了，所以显示该目录已经存在：</p>
 <p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200610221033966.png" alt="image-20200610221033966"></p>
 <p>当然嫌麻烦的同学，也可以直接到该目录下建立文件夹，用操作windows资源管理器的逻辑即可应付，进到目录<code>C:\Users\零下三度极寒\Documents\</code>下查看文件夹是否建立：</p>
 <p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200610222249688.png" alt="image-20200610222249688"></p>
 </li>
 <li><p>初始化hexo：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-
-<p>等待自动完成初始化，可以看到clone了一个默认的landscape主题：</p>
+<pre><code>hexo init</code></pre><p>等待自动完成初始化，可以看到clone了一个默认的landscape主题：</p>
 <p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200610222915955.png" alt="image-20200610222915955"></p>
 <p>可以使用<code>dir</code>命令看一下该目录下生成了哪些目录和文件：</p>
 <p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200610223217012.png" alt="image-20200610223217012"></p>
@@ -556,9 +546,7 @@
 <p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200610224133239.png" alt="image-20200610224133239"></p>
 </li>
 <li><p>运行博客</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p><code>s</code>就是start的意思</p>
+<pre><code>hexo s</code></pre><p><code>s</code>就是start的意思</p>
 <p>可以看到博客成功在本地的4000端口运行，在浏览器中输入<a href="http://localhost:4000即可查看博客：">http://localhost:4000即可查看博客：</a></p>
 <p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200610224457102.png" alt="image-20200610224457102"></p>
 <p>博客效果如下，可以看到默认生成了一篇文章，该文章介绍了hexo的指令和用法：</p>
@@ -568,12 +556,12 @@
 <p>按下<kbd>Ctrl</kbd>+<kbd>C</kbd>停止博客运行，再输入N确保cmd命令行窗口不要关闭，使用命令<code>hexo n “我的第一篇博客文章”</code>创建我的第一篇博客文章，如下图：</p>
 <p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200610225416705.png" alt="image-20200610225416705"></p>
 <p>可以看到该文章为.md格式的markdown文档，我们可以直接进入文章所在目录，打开该文档使用Typora编辑器或vscode进行编辑，进入命令如下，结果如图：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dir		&#x2F;&#x2F;显示当前目录下的目录和文件</span><br><span class="line">cd source&#x2F;_posts&#x2F;</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200610225916066.png" alt="image-20200610225916066"></p>
+<pre><code>dir        //显示当前目录下的目录和文件
+cd source/_posts/</code></pre><p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200610225916066.png" alt="image-20200610225916066"></p>
 <p>这里你的电脑如果安装了vim是可以直接在dos界面进行编辑的，由于我的电脑没有安装vim而且我也不是相关专业的，因此我直接在typora里进行编辑，输入如下代码后保存，如图：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 这是我在构建hexo博客时创建的第一条博客文章</span></span><br><span class="line"><span class="section">## 感谢你的阅读</span></span><br><span class="line"><span class="strong">**欢迎访问另一个构建在github仓库上的[博客](https://minus3degreefrozen.github.io)**</span></span><br></pre></td></tr></table></figure>
-
+<pre class=" language-markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 这是我在构建hexo博客时创建的第一条博客文章</span>
+<span class="token title important"><span class="token punctuation">##</span> 感谢你的阅读</span>
+<span class="token bold"><span class="token punctuation">**</span>欢迎访问另一个构建在github仓库上的<span class="token url">[博客](https://minus3degreefrozen.github.io)</span><span class="token punctuation">**</span></span></code></pre>
 <p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200610230721726.png" alt="image-20200610230721726"></p>
 </li>
 <li><p>更新博客</p>
@@ -589,19 +577,21 @@
 <p>按下<kbd>Ctrl</kbd>+<kbd>C</kbd>停止博客运行，再输入N确保cmd命令行窗口不要关闭，访问你的gitee账号，新建一个仓库：</p>
 <p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200611004119645.png" alt="image-20200611004119645"></p>
 <p>使用以下命令安装hexo的远端部署插件<code>hexo-deployer-git</code>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200610233802681.png" alt="image-20200610233802681"></p>
+<pre><code>cnpm install --save hexo-deployer-git</code></pre><p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200610233802681.png" alt="image-20200610233802681"></p>
 <p>使用vscode配置博客目下的<code>_config.yml</code>文件，找到<code># Deployment</code>：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">''</span></span><br></pre></td></tr></table></figure>
-
+<pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># Deployment</span>
+<span class="token comment" spellcheck="true">## Docs: https://hexo.io/docs/deployment.html</span>
+<span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> <span class="token string">''</span></code></pre>
 <p>填入如下配置后保存退出：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">'git'</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://gitee.com/minus3degreefrozen/minus3degreefrozen.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-
+<pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># Deployment</span>
+<span class="token comment" spellcheck="true">## Docs: https://hexo.io/docs/deployment.html</span>
+<span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> <span class="token string">'git'</span>
+  <span class="token key atrule">repo</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//gitee.com/minus3degreefrozen/minus3degreefrozen.git
+  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master</code></pre>
 <p>使用如下命令部署到远端，如图：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p><code>d</code>即deploy的意思</p>
+<pre><code>hexo d</code></pre><p><code>d</code>即deploy的意思</p>
 <p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200610235531891.png" alt="image-20200610235531891"></p>
 <p>部署过程中会提示你输入gitee账号用户名和密码：</p>
 <p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200610235715701.png" alt="image-20200610235715701"></p>
@@ -621,27 +611,23 @@
 <p>下面以主题yilia为例演示如何更换主题：</p>
 <ol>
 <li><p>将主题clone到<code>\Blog_Gitee\themes</code>目录下的新建文件夹<code>\yilia</code>里面，如图：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;litten&#x2F;hexo-theme-yilia.git themes\yilia</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200611012014054.png" alt="image-20200611012014054"></p>
+<pre><code>git clone https://github.com/litten/hexo-theme-yilia.git themes\yilia</code></pre><p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200611012014054.png" alt="image-20200611012014054"></p>
 <p>由于github在国内处于半墙的状态，如果你觉得直接在dos上clone很慢，那么你可以选择到yilia主题的仓库页面点击<kbd>Clone or download</kbd>下载压缩包.zip文件到本地，然后解压至<code>\Blog_Gitee\themes</code>目录下的新建文件夹<code>\yilia</code>里面，如图：</p>
 <p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200611012125583.png" alt="image-20200611012125583"></p>
 <p>进入<code>\themes</code>文件夹下查看是否clone成功，可以看到确实有yilia文件夹了，如图：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd themes &amp;&amp; dir</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200611012512397.png" alt="image-20200611012512397"></p>
+<pre><code>cd themes &amp;&amp; dir</code></pre><p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200611012512397.png" alt="image-20200611012512397"></p>
 </li>
 <li><p>修改<code>_config.yml</code>文件配置</p>
 <p>找到如下代码：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">landscape</span></span><br></pre></td></tr></table></figure>
-
+<pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># Extensions</span>
+<span class="token comment" spellcheck="true">## Plugins: https://hexo.io/plugins/</span>
+<span class="token comment" spellcheck="true">## Themes: https://hexo.io/themes/</span>
+<span class="token key atrule">theme</span><span class="token punctuation">:</span> landscape</code></pre>
 <p>将其中的<code>landscape</code>修改为<code>yilia</code>即可，保存并退出。</p>
 </li>
 <li><p>更新博客</p>
 <p>使用<code>cd ..</code>回到上级博客根目录，使用三连击命令，如图：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200611013332091.png" alt="image-20200611013332091"></p>
+<pre><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code></pre><p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200611013332091.png" alt="image-20200611013332091"></p>
 <p>在浏览器中输入<a href="http://localhost:4000即可查看博客，如图：">http://localhost:4000即可查看博客，如图：</a></p>
 <p><img src="/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200611013523980.png" alt="image-20200611013523980"></p>
 </li>
@@ -649,7 +635,25 @@
 <p>再次执行命令<code>hexo d</code>即可，然后在gitee pages部署页面点击<kbd>更新</kbd>按钮即可更新页面，由于网络延迟，可能需要耐心等待一会才会看到主题变化。</p>
 </li>
 </ol>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -664,7 +668,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                    <a href="/about" rel="external nofollow noreferrer">零下三度极寒</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -674,7 +678,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">http://yoursite.com/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</a>
+                    <a href="https://minus3degreefrozen.github.io/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">https://minus3degreefrozen.github.io/2020/06/11/Node.js+Hexo%E6%A1%86%E6%9E%B6+Gitee%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -687,7 +691,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">John Doe</a>
+                    <a href="/about" target="_blank">零下三度极寒</a>
                     !
                 </span>
             </div>
@@ -898,12 +902,11 @@
 git的安装略
 Hexo框架的安装
 查看Node.js版本
-1node -v
+node -v
 
 查看npm包管理器版本
-1npm -v
-
-效果图如下，Node.js版本为v12
+npm -v
+效果图如下，Node.js版本为v12.18
                         
                     </div>
                     <div class="publish-info">
@@ -913,7 +916,7 @@ Hexo框架的安装
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            John Doe
+                            零下三度极寒
                             
                         </span>
                     </div>
@@ -951,7 +954,7 @@ Hexo框架的安装
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            John Doe
+                            零下三度极寒
                             
                         </span>
                     </div>
@@ -993,8 +996,8 @@ Hexo框架的安装
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + '来源: Hexo<br />'
-            + '文章作者: John Doe<br />'
+            + '来源: Minus3DegreeFrozen<br />'
+            + '文章作者: 零下三度极寒<br />'
             + '文章链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
 
@@ -1136,13 +1139,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">2020</span>
-            <a href="/about" target="_blank">John Doe</a>
+            <a href="/about" target="_blank">零下三度极寒</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">1.8k</span>&nbsp;字
+                class="white-color">1.9k</span>&nbsp;字
             
             
             
