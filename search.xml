@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>giteeblog</title>
+      <link href="/2020/06/11/giteeblog/"/>
+      <url>/2020/06/11/giteeblog/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://picbedforgitee.oss-cn-shanghai.aliyuncs.com/image/20200611175114.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>test</title>
       <link href="/2020/06/11/test/"/>
       <url>/2020/06/11/test/</url>
